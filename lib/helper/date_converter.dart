@@ -1,13 +1,8 @@
-import 'dart:developer';
 import 'package:intl/intl.dart';
 
 class DateConverter {
   static String formatDate(DateTime dateTime) {
     return DateFormat('yyyy-MM-dd hh:mm:ss').format(dateTime);
-  }
-
-  static String estimatedDate(DateTime dateTime) {
-    return DateFormat('dd MMM yyyy').format(dateTime);
   }
 
   static String dateTimeStringToDateTime(String dateTime) {
@@ -38,11 +33,11 @@ class DateConverter {
     return DateFormat('dd MMM yyyy').format(isoStringToLocalDate(dateTime));
   }
 
-  static String isoStringToLocalAMPM(String dateTime) {
+  static String isoStringToLocalAmPm(String dateTime) {
     return DateFormat('a').format(isoStringToLocalDate(dateTime));
   }
 
-  static String isoStringToLocalDateAnTime(String dateTime) {
+  static String isoStringToLocalDateAndTime(String dateTime) {
     return DateFormat('dd/MMM/yyyy ${_timeFormatter('24')}').format(isoStringToLocalDate(dateTime));
   }
 
@@ -62,20 +57,6 @@ class DateConverter {
 
   static String _timeFormatter(format) {
     return format == '24' ? 'HH:mm' : 'hh:mm a';
-  }
-
-  static int differenceInMinute(String deliveryTime, String orderTime, int processingTime, String scheduleAt) {
-    int _minTime = processingTime;
-    if (deliveryTime.isNotEmpty) {
-      try {
-        List<String> _timeList = deliveryTime.split('-');
-        _minTime = int.parse(_timeList[0]);
-      } catch (e) {
-        log('Exception: ${e.toString()}');
-      }
-    }
-    DateTime _deliveryTime = dateTimeStringToDate(scheduleAt).add(Duration(minutes: _minTime));
-    return _deliveryTime.difference(DateTime.now()).inMinutes;
   }
 
   static bool isBeforeTime(String dateTime) {
