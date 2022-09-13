@@ -1,4 +1,3 @@
-
 import 'package:component_testing/constants/dimensions.dart';
 import 'package:flutter/material.dart';
 
@@ -19,3 +18,7 @@ const kH8sizedBox = SizedBox(height: kSmallPaddingUnit * 2);
 const kH12sizedBox = SizedBox(height: kSmallPaddingUnit * 3);
 const kH16sizedBox = SizedBox(height: kSmallPaddingUnit * 4);
 const kH20sizedBox = SizedBox(height: kSmallPaddingUnit * 5);
+
+//* border radius widget
+BorderRadius k5BorderRadius = BorderRadius.circular(kRadius5);
+BorderRadius k10BorderRadius = BorderRadius.circular(kRadius10);

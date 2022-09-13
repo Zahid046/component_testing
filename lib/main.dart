@@ -1,4 +1,5 @@
-import 'package:component_testing/helper/date_converter.dart';
+import 'package:component_testing/constants/values.dart';
+import 'package:component_testing/helper/utility.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Component Testing'),
     );
   }
 }
@@ -33,6 +34,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    heightWidth(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -44,45 +46,12 @@ class MyHomePage extends StatelessWidget {
             Text(
               'Main Date : ' + DateTime.now().toString(),
             ),
-            Text(
-              'Converted DateTime : ' + DateConverter.formatDate(DateTime.now()),
-            ),
-            Text(
-              'Converted DateTime: ' + DateConverter.dateTimeStringToDateTime(DateTime.now().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.dateTimeStringToDateOnly(DateTime.now().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.dateTimeStringToDate(DateTime.now().toString()).toString(),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.convertStringToDateTime(DateTime.now().toIso8601String().toString()).toString(),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.isoStringToLocalDate(DateTime.now().toIso8601String().toString()).toString(),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.isoStringToLocalTimeOnly(DateTime.now().toIso8601String().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.isoStringToLocalDateOnly(DateTime.now().toIso8601String().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.isoStringToLocalAmPm(DateTime.now().toIso8601String().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.isoStringToLocalDateAndTime(DateTime.now().toIso8601String().toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.localDateToIsoString(DateTime.now()),
-            ),
-            Text(
-              'Converted Date : ' +
-                  DateConverter.convertTimeToTime(DateTime.now().hour.toString() + ':' + DateTime.now().minute.toString() + ':' + DateTime.now().second.toString()),
-            ),
-            Text(
-              'Converted Date : ' + DateConverter.timeDistanceInMin(DateTime.now().toString()).toString(),
+            TextButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).clearSnackBars();
+                ScaffoldMessenger.of(context).showSnackBar(getSnackBar(context, width, 'Success', 'Button clicked', Colors.green));
+              },
+              child: const Text('Show SnackBar'),
             ),
           ],
         ),

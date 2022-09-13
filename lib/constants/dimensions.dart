@@ -1,14 +1,11 @@
 //* info:: font sizes
-const double kFontSize10 = 10.0;
 const double kFontSize12 = 12.0;
 const double kFontSize14 = 14.0;
 const double kFontSize16 = 16.0;
 const double kFontSize18 = 18.0;
 const double kFontSize20 = 20.0;
 const double kFontSize24 = 24.0;
-const double kFontSize26 = 26.0;
 const double kFontSize28 = 28.0;
-const double kFontSize30 = 30.0;
 const double kFontSize32 = 32.0;
 
 //* info:: padding amounts
@@ -19,10 +16,10 @@ const double kPaddingSize20 = 20.0;
 const double kPaddingSize25 = 25.0;
 
 //* info:: border radius
-const double kBorderRadius5 = 5.0;
-const double kBorderRadius10 = 10.0;
-const double kBorderRadius15 = 15.0;
-const double kBorderRadius20 = 20.0;
+const double kRadius5 = 5.0;
+const double kRadius10 = 10.0;
+const double kRadius15 = 15.0;
+const double kRadius20 = 20.0;
 
 //* info:: app bar height
 const double kBigScreenAppBarHeight = 56.0;
