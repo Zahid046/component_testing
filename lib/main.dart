@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Component Testing'),
+      home: const MyHomePage(
+        title: 'Component Testing',
+      ),
     );
   }
 }
@@ -37,7 +39,9 @@ class MyHomePage extends StatelessWidget {
     heightWidth(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(
+          title,
+        ),
       ),
       body: Center(
         child: Column(
@@ -49,9 +53,19 @@ class MyHomePage extends StatelessWidget {
             TextButton(
               onPressed: () {
                 ScaffoldMessenger.of(context).clearSnackBars();
-                ScaffoldMessenger.of(context).showSnackBar(getSnackBar(context, width, 'Success', 'Button clicked', Colors.green));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  getSnackBar(
+                    context,
+                    width,
+                    'Success',
+                    'Button clicked',
+                    Colors.green,
+                  ),
+                );
               },
-              child: const Text('Show SnackBar'),
+              child: const Text(
+                'Show SnackBar',
+              ),
             ),
           ],
         ),
