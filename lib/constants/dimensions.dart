@@ -1,19 +1,47 @@
-class Dimensions {
-  static const double fontSizeExtraSmall = 10.0;
-  static const double fontSizeSmall = 12.0;
-  static const double fontSizeDefault = 14.0;
-  static const double fontSizeLarge = 16.0;
-  static const double fontSizeExtraLarge = 18.0;
-  static const double fontSizeOverLarge = 24.0;
+//* info:: font sizes
+const double kFontSize10 = 10.0;
+const double kFontSize12 = 12.0;
+const double kFontSize14 = 14.0;
+const double kFontSize16 = 16.0;
+const double kFontSize18 = 18.0;
+const double kFontSize20 = 20.0;
+const double kFontSize24 = 24.0;
+const double kFontSize26 = 26.0;
+const double kFontSize28 = 28.0;
+const double kFontSize30 = 30.0;
+const double kFontSize32 = 32.0;
 
-  static const double paddingSizeExtraSmall = 5.0;
-  static const double paddingSizeSmall = 10.0;
-  static const double paddingSizeDefault = 15.0;
-  static const double paddingSizeLarge = 20.0;
-  static const double paddingSizeExtraLarge = 25.0;
+//* info:: padding amounts
+const double kPaddingSize5 = 5.0;
+const double kPaddingSize10 = 10.0;
+const double kPaddingSize15 = 15.0;
+const double kPaddingSize20 = 20.0;
+const double kPaddingSize25 = 25.0;
 
-  static const double radiusSmall = 5.0;
-  static const double radiusDefault = 10.0;
-  static const double radiusLarge = 15.0;
-  static const double radiusExtraLarge = 20.0;
-}
+//* info:: border radius
+const double kBorderRadius5 = 5.0;
+const double kBorderRadius10 = 10.0;
+const double kBorderRadius15 = 15.0;
+const double kBorderRadius20 = 20.0;
+
+//* info:: app bar height
+const double kBigScreenAppBarHeight = 56.0;
+const double kSmallScreenAppBarHeight = 44.0;
+
+//* info:: small device size limit
+const double kSmallDeviceSizeLimit = 750;
+
+//* info:: elevation
+const double kCommonElevation = 5.0;
+
+//* info:: icon sizes
+const double kIconSize16 = 16;
+const double kIconSize20 = 20;
+
+//* info:: back space size
+const double kCommonBackSpace = 60.0;
+
+//* padding for different component
+const double kHorizontalPadding = 20.0;
+const double kSmallPaddingUnit = 4.0;
+
