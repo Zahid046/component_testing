@@ -130,7 +130,7 @@ class ApiController {
   }
 
   // dio post type of request
-  Future<dynamic> commonPostWithBodyDio({
+  Future<dynamic> commonPostWithDio({
     required String? token,
     required String url,
     required Map<String, dynamic> body,

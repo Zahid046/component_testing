@@ -1,11 +1,11 @@
+import 'package:component_testing/components/text_field.dart';
+import 'package:component_testing/constants/dimensions.dart';
 import 'package:component_testing/constants/values.dart';
 import 'package:component_testing/helper/utility.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    const MyApp(),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,14 +13,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const MyHomePage(
-        title: 'Component Testing',
+    return GestureDetector(
+      onTap: () {
+        FocusScopeNode currentFocus = FocusScope.of(context);
+        if (!currentFocus.hasPrimaryFocus && currentFocus.focusedChild != null) {
+          FocusManager.instance.primaryFocus!.unfocus();
+        }
+      },
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const MyHomePage(
+          title: 'Component Testing',
+        ),
       ),
     );
   }
@@ -67,6 +75,14 @@ class MyHomePage extends StatelessWidget {
                 'Show SnackBar',
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: kPaddingSize20),
+              child: CustomTextField(
+                textEditingController: TextEditingController(),
+              ),
+            ),
+
+            
           ],
         ),
       ),

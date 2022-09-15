@@ -25,6 +25,11 @@ const double kRadius20 = 20.0;
 const double kBigScreenAppBarHeight = 56.0;
 const double kSmallScreenAppBarHeight = 44.0;
 
+//* info:: button height, width
+const double kButtonHeight = 48.0;
+const double kSmallButtonHeight = 32.0;
+const double kButtonMaxWidth = 200.0;
+
 //* info:: small device size limit
 const double kSmallDeviceSizeLimit = 750;
 

@@ -8,7 +8,7 @@ ThemeData light = ThemeData(
   errorColor: const Color(0xFFE84D4F),
   brightness: Brightness.light,
   hintColor: const Color(0xFF9F9F9F),
-  cardColor: Colors.white,
+  cardColor: Colors.white,    
   colorScheme: const ColorScheme.light(primary: Color(0xFFEF7822), secondary: Color(0xFFEF7822)),
   textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(foregroundColor: const Color(0xFFEF7822))),
 );
