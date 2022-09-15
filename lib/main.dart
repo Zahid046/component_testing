@@ -1,3 +1,4 @@
+import 'package:component_testing/components/text_button.dart';
 import 'package:component_testing/components/text_field.dart';
 import 'package:component_testing/constants/dimensions.dart';
 import 'package:component_testing/constants/values.dart';
@@ -77,12 +78,11 @@ class MyHomePage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: kPaddingSize20),
-              child: CustomTextField(
-                textEditingController: TextEditingController(),
+              child: CustomButton(
+                label: 'New Button',
+                onPressed: () {},
               ),
             ),
-
-            
           ],
         ),
       ),

@@ -7,7 +7,7 @@ class CustomButton extends StatelessWidget {
   final dynamic label;
   final GestureTapCallback? onPressed;
   final double? buttonWidth, buttonHeight, iconSize;
-  final Color? buttonColor;
+  final Color buttonColor;
   final Color? borderColor, iconColor;
   final bool isButtonInPopUp, autoFocus, isTextButton, isSmall;
   final IconData? labelIcon;
@@ -15,15 +15,15 @@ class CustomButton extends StatelessWidget {
 
   const CustomButton({
     Key? key,
-    this.buttonColor,
-    this.iconColor,
+    this.buttonColor = Colors.amber, // todo:: this will be primary color,
+    this.iconColor = Colors.grey, // todo:: this will be default icon color,
     this.borderColor,
     this.iconSize,
     required this.label,
     this.onPressed,
     this.buttonWidth,
     this.labelIcon,
-    this.buttonHeight,
+    this.buttonHeight = kButtonHeight,
     this.isButtonInPopUp = true,
     this.autoFocus = false,
     this.isTextButton = false,
@@ -56,7 +56,7 @@ class CustomButton extends StatelessWidget {
                 ? Colors.transparent
                 : (onPressed == null)
                     ? Colors.grey.withOpacity(0.2)
-                    : (borderColor ?? buttonColor ?? Colors.transparent), // todo:: transparent color will be changed to a primary color in future,
+                    : (borderColor ?? buttonColor),
             width: 1,
           ),
         ).copyWith(overlayColor: MaterialStateProperty.all(Colors.grey.withOpacity(.2))),
